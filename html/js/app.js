@@ -2287,7 +2287,7 @@ var requiredItemOpen = false;
     Inventory.slots = 40;
 
     Inventory.dropslots = 30;
-    Inventory.droplabel = "Drop";
+    Inventory.droplabel = "Marken";
     Inventory.dropmaxweight = 100000;
 
     Inventory.Error = function() {
@@ -2907,7 +2907,7 @@ var requiredItemOpen = false;
     Inventory.UseItem = function(data) {
         $(".itembox-container").hide();
         $(".itembox-container").fadeIn(250);
-        $("#itembox-action").html("<p>Used 1x</p>");
+        $("#itembox-action").html("<p>Använde 1x</p>");
         $("#itembox-label").html("<p>" + data.item.label + "</p>");
         $("#itembox-image").html(
             '<div class="item-slot-img"><img src="images/' +
@@ -2928,11 +2928,11 @@ var requiredItemOpen = false;
         if (itemBoxtimer !== null) {
             clearTimeout(itemBoxtimer);
         }
-        var type = "Used " + data.itemAmount + "x";
+        var type = "Använde " + data.itemAmount + "x";
         if (data.type == "add") {
-          type = "Received " + data.itemAmount + "x";
+          type = "Tog emot " + data.itemAmount + "x";
         } else if (data.type == "remove") {
-          type = "Removed " + data.itemAmount + "x";
+          type = "Tog bort " + data.itemAmount + "x";
         }
 
         var $itembox = $(".itembox-container.template").clone();

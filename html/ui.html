@@ -22,7 +22,7 @@
         <div id="qbcore-inventory">
             <div class="inventory-info">
                 <div class="player-inv-info">
-                    <span id="player-inv-label">Player</span><br>
+                    <span id="player-inv-label">Ditt Inventory</span><br>
                     <!-- <img class="weight-img" src="images/weight.png"> -->
                         <div>
                             <div id="progressbar">
@@ -50,14 +50,15 @@
             </div>
                 <div class="inv-options">
                     <div class="inv-options-list">
-                        <img class="brand-logo" src="./images/lj-symbol.svg"></img>
-                        <input type="number" id="item-amount" class="inv-option-item" min=1 max="10000" placeholder="Amount" pattern="[0-9]" onfocus="this.value=''" placeholder="" oninput="validity.valid||(value='');"></input>                        <div class="inv-option-item" id="item-use"><p>Use</p></div>
+                        <img class="brand-logo" src="./images/512.png"></img>
+                        <input type="number" id="item-amount" class="inv-option-item" min=1 max="10000" placeholder="0" pattern="[0-9]" onfocus="this.value=''" placeholder="" oninput="validity.valid||(value='');"></input>                        
+                        <div class="inv-option-item" id="item-use"><p>Använd</p></div>
                         <!-- <img class="inv-option-hand" id= "item-use" src="images/hand-1.png"> -->
-                        <div class="inv-option-item" id="item-give"><p>Give</p></div>
-                        <div class="inv-option-item" id="inv-close"><p>Close</p></div>
+                        <div class="inv-option-item" id="item-give"><p>Ge</p></div>
+                        <div class="inv-option-item" id="inv-close"><p>Stäng</p></div>
                         <div class="combine-option-container">
-                            <div class="btn-combine CombineItem"><p>Combine</p></div>
-                            <div class="btn-combine SwitchItem"><p>Switch</p></div>
+                            <div class="btn-combine CombineItem"><p>Kombinera</p></div>
+                            <div class="btn-combine SwitchItem"><p>Byt</p></div>
                         </div>
                     </div>
                 </div>
@@ -88,7 +89,7 @@
                   <q-dialog v-model="options">
                     <q-card>
                       <q-card-section>
-                        <div class="text-h6">Options</div>
+                        <div class="text-h6">Alternativ</div>
                       </q-card-section>
               
                       <q-card-section class="q-pt-none">
@@ -98,8 +99,8 @@
                                 <q-checkbox dark v-on:click="select($event)" v-model="showblur" color="checkbox"></q-checkbox>
                             </q-item-section>
                             <q-item-section>
-                                <q-item-label class="text-check">Show Background Blur</q-item-label>
-                                <q-item-label caption>Disabling this will remove the background blur effect while inside your inventory.</q-item-label>
+                                <q-item-label class="text-check">Visa suddig bakgrund</q-item-label>
+                                <q-item-label caption>Om du inaktiverar detta tar du bort den suddiga bakgrundseffekten när du har uppe ditt inventory.</q-item-label>
                             </q-item-section>
                             </q-item>
                         </div>
@@ -114,7 +115,7 @@
                   <q-dialog position="right" v-model="help">
                     <q-card style="max-width: 786px; padding: 40px 20px 40px 30px; bottom: 2.5vh; right: 2.25vw;">
                       <q-card-section>
-                        <div class="text-h6">Help:</div>
+                        <div class="text-h6">Hjälp:</div>
                       </q-card-section>
               
                       <q-card-section class="q-pt-none">
@@ -175,7 +176,7 @@
 
             <div class="weapon-attachments-remove"><i class="fas fa-trash"></i></div>
 
-            <div class="weapon-attachments-back"><p>RETURN</p></div>
+            <div class="weapon-attachments-back"><p>TILLBAKA</p></div>
         </div>
         <div class="itemboxes-container"></div>
         <div class="itembox-container template"></div>

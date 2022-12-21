@@ -1001,7 +1001,7 @@ CreateThread(function()
     end
 end)
 
-
+--[[
     --qb-target
     RegisterNetEvent("inventory:client:Crafting", function(dropId)
         local crafting = {}
@@ -1043,3 +1043,4 @@ end)
             },
         distance = 1.0
     })
+]]
